@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-100 p-2 md:p-4 lg:p-6 font-sans text-slate-800 selection:bg-blue-200 selection:text-blue-900">
-      <div className="max-w-none mx-auto flex flex-col h-full min-h-[calc(100vh-3rem)] bg-white shadow-2xl shadow-slate-200/50 rounded-2xl overflow-hidden border border-slate-200 ring-1 ring-black/5">
+      <div className="max-w-none mx-auto flex flex-col h-full min-h-[calc(100vh-3rem)] bg-slate-50 shadow-2xl shadow-slate-200/50 rounded-2xl overflow-hidden border border-slate-200 ring-1 ring-black/5">
         {/* App Header */}
         <header className="px-10 py-8 border-b border-slate-200 bg-white flex items-center gap-4">
           <div className="bg-blue-600 p-2.5 rounded-xl shadow-inner shadow-blue-800/30">
@@ -53,12 +53,12 @@ function App() {
         </header>
 
         {/* Main Content Area */}
-        <div className="flex flex-col lg:flex-row flex-1 overflow-hidden">
-          <main className="flex-1 overflow-y-auto order-2 lg:order-1 bg-white relative">
+        <div className="flex flex-col lg:flex-row flex-1 overflow-hidden lg:gap-8 lg:p-8">
+          <main className="flex-1 overflow-y-auto order-2 lg:order-1 bg-white relative rounded-xl border border-slate-200 shadow-sm">
             <ElementPreview style={reactStyle} />
           </main>
 
-          <aside className="w-full lg:w-[460px] lg:shrink-0 border-b lg:border-b-0 lg:border-l border-slate-200 bg-slate-50/50 order-1 lg:order-2 lg:h-auto lg:overflow-y-auto">
+          <aside className="w-full lg:w-[460px] lg:shrink-0 order-1 lg:order-2 lg:h-auto lg:overflow-y-auto bg-white rounded-xl border border-slate-200 shadow-sm">
             <ControlPanel
               styles={styles}
               onUpdate={updateStyle}
