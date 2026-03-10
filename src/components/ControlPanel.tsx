@@ -136,7 +136,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   };
 
   return (
-    <div className="p-8 flex flex-col h-full space-y-12">
+    <div className="p-12 flex flex-col h-full space-y-20">
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
           <Palette className="text-blue-600" size={20} />
@@ -147,7 +147,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </p>
       </div>
 
-      <div className="space-y-12 flex-1 py-4">
+      <div className="space-y-20 flex-1 py-10 h-full ">
         {controls.map((ctrl) => {
           const isColor = ctrl.type === 'color';
           const value = styles[ctrl.prop];
@@ -162,7 +162,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           return (
             <div
               key={ctrl.prop}
-              className="group flex flex-col gap-6 bg-white p-5 rounded-xl shadow-sm border border-slate-200/60 hover:shadow-md transition-all duration-300"
+              className="group flex flex-col gap-10 bg-white p-10 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-md transition-all duration-300"
             >
               <div className="flex justify-between items-center">
                 <label className="flex items-center gap-2 text-xs font-bold text-slate-700 uppercase tracking-widest group-hover:text-blue-600 transition-colors shrink-0">
@@ -174,14 +174,14 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
 
                 {!isColor && isStyleObj && (
                   <div className="flex items-center gap-3">
-                    <div className="flex bg-slate-100 p-0.5 rounded-lg text-[9px] font-bold tracking-wider border border-slate-200/50">
+                    <div className="flex bg-slate-100 p-2 rounded-lg text-[9px] font-bold tracking-wider border gap-4 border-slate-200/50">
                       {(['px', 'rem', 'em'] as CssUnit[]).map((u) => (
                         <button
                           key={u}
                           onClick={() =>
                             handleUnitChange(ctrl.prop, value as StyleValue, u)
                           }
-                          className={`px-2 py-0.5 rounded-md transition-all ${currentUnit === u ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200' : 'text-slate-400 hover:text-slate-600'}`}
+                          className={`p-4 rounded-md transition-all ${currentUnit === u ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200' : 'text-slate-400 hover:text-slate-600'}`}
                         >
                           {u}
                         </button>
@@ -230,10 +230,10 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         })}
       </div>
 
-      <div className="pt-6 border-t border-slate-200 space-y-3">
+      <div className="pt-10 border-t border-slate-200 space-y-6">
         <button
           onClick={generateCSS}
-          className={`w-full py-3 flex items-center justify-center gap-2 rounded-xl font-bold text-sm transition-all shadow-md active:scale-[0.98] ${
+          className={`w-full py-5 flex items-center justify-center gap-2 rounded-xl font-bold text-sm transition-all shadow-md active:scale-[0.98] ${
             copied
               ? 'bg-emerald-500 text-white hover:bg-emerald-600'
               : 'bg-slate-900 text-white hover:bg-slate-800'
@@ -251,7 +251,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </button>
         <button
           onClick={onReset}
-          className="w-full py-3 flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:bg-slate-50 hover:border-slate-300 hover:text-slate-800 transition-all active:scale-[0.98]"
+          className="w-full py-5 flex items-center justify-center gap-2 bg-white border-2 border-slate-200 text-slate-600 rounded-xl font-bold text-sm hover:bg-slate-50 hover:border-slate-300 hover:text-slate-800 transition-all active:scale-[0.98]"
         >
           <RotateCcw size={16} /> RESET TO DEFAULT
         </button>
