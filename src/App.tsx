@@ -39,6 +39,16 @@ function App() {
             />
           </aside>
         </div>
+
+        {/* App Footer */}
+        <footer className="px-10 py-4 border-t border-slate-200 bg-slate-50/30 flex justify-between items-center">
+          <p className="text-xs font-medium text-slate-400">
+            Build time: {new Date(__BUILD_TIME__).toLocaleString()}
+          </p>
+          <p className="text-xs font-medium text-slate-400">
+            &copy; {new Date().getFullYear()} ElementDemo
+          </p>
+        </footer>
       </div>
     </div>
   );

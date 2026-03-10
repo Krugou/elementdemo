@@ -136,7 +136,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   };
 
   return (
-    <div className="p-10 flex flex-col h-full space-y-12 bg-slate-50/50">
+    <div className="p-8 flex flex-col h-full space-y-10 bg-slate-50/50">
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
           <Palette className="text-blue-600" size={20} />
@@ -147,7 +147,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </p>
       </div>
 
-      <div className="space-y-10 flex-1">
+      <div className="space-y-6 flex-1">
         {controls.map((ctrl) => {
           const isColor = ctrl.type === 'color';
           const value = styles[ctrl.prop];
@@ -160,7 +160,10 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           const currentUnit = isStyleObj ? (value as StyleValue).unit : '';
 
           return (
-            <div key={ctrl.prop} className="group flex flex-col gap-4">
+            <div
+              key={ctrl.prop}
+              className="group flex flex-col gap-5 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-md transition-all duration-300"
+            >
               <div className="flex justify-between items-center">
                 <label className="flex items-center gap-2 text-xs font-bold text-slate-700 uppercase tracking-widest group-hover:text-blue-600 transition-colors shrink-0">
                   <span className="text-slate-400 group-hover:text-blue-500 transition-colors">
@@ -170,8 +173,8 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                 </label>
 
                 {!isColor && isStyleObj && (
-                  <div className="flex items-center gap-4">
-                    <div className="flex bg-slate-200/50 p-1 rounded-lg text-[10px] font-bold tracking-wider border border-slate-200/50">
+                  <div className="flex items-center gap-3">
+                    <div className="flex bg-slate-100 p-0.5 rounded-lg text-[9px] font-bold tracking-wider border border-slate-200/50">
                       {(['px', 'rem', 'em'] as CssUnit[]).map((u) => (
                         <button
                           key={u}
@@ -184,7 +187,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                         </button>
                       ))}
                     </div>
-                    <span className="text-xs font-mono font-bold text-slate-600 min-w-12 text-right bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
+                    <span className="text-xs font-mono font-bold text-slate-600 min-w-10 text-right">
                       {numValue}
                       <span className="text-[10px] text-slate-400 ml-0.5">
                         {currentUnit}
@@ -195,30 +198,32 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
               </div>
 
               {isColor ? (
-                <div className="relative h-10 w-full rounded-lg shadow-sm overflow-hidden border border-slate-200 hover:border-blue-400 transition-all focus-within:ring-2 focus-within:ring-blue-100">
+                <div className="relative h-10 w-full rounded-xl shadow-inner bg-slate-50 overflow-hidden border border-slate-200 hover:border-blue-400 transition-all focus-within:ring-2 focus-within:ring-blue-100">
                   <input
                     type="color"
                     value={value as string}
                     onChange={(e) => onUpdate(ctrl.prop, e.target.value)}
-                    className="absolute inset-0 w-[120%] h-[120%] -translate-x-1 -translate-y-1 cursor-pointer"
+                    className="absolute inset-0 w-[120%] h-[120%] -translate-x-1 -translate-y-1 cursor-pointer border-none bg-transparent"
                   />
                 </div>
               ) : (
-                <input
-                  type="range"
-                  min={ctrl.min}
-                  max={ctrl.max}
-                  value={numValue}
-                  onChange={(e) =>
-                    isStyleObj
-                      ? onUpdate(ctrl.prop, {
-                          ...(value as StyleValue),
-                          value: parseInt(e.target.value),
-                        })
-                      : onUpdate(ctrl.prop, parseInt(e.target.value))
-                  }
-                  className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600 hover:accent-blue-700 transition-all focus:outline-none focus:ring-4 focus:ring-blue-100"
-                />
+                <div className="flex items-center gap-4">
+                  <input
+                    type="range"
+                    min={ctrl.min}
+                    max={ctrl.max}
+                    value={numValue}
+                    onChange={(e) =>
+                      isStyleObj
+                        ? onUpdate(ctrl.prop, {
+                            ...(value as StyleValue),
+                            value: parseInt(e.target.value),
+                          })
+                        : onUpdate(ctrl.prop, parseInt(e.target.value))
+                    }
+                    className="flex-1 h-1.5 bg-slate-100 rounded-full appearance-none cursor-pointer accent-blue-600 hover:accent-blue-700 transition-all focus:outline-none focus:ring-4 focus:ring-blue-100"
+                  />
+                </div>
               )}
             </div>
           );
