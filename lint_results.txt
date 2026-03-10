@@ -1,0 +1,8 @@
+
+C:\Users\moxch\Documents\GitHub\elementdemo\src\components\ElementPreview.tsx
+   19:29  error  Replace `┬ÀsectionName:┬Àstring;┬Àstyle:┬ÀReact.CSSProperties┬À}>┬À=┬À({ÔÅÄ┬À┬ÀsectionName,ÔÅÄ┬À┬Àstyle,ÔÅÄ` with `ÔÅÄ┬À┬ÀsectionName:┬Àstring;ÔÅÄ┬À┬Àstyle:┬ÀReact.CSSProperties;ÔÅÄ}>┬À=┬À({┬ÀsectionName,┬Àstyle┬À`           prettier/prettier
+  270:15  error  Replace `┬Àstyle={style}┬ÀclassName="bg-transparent┬Àborder-none┬Àtext-[#d4d4d4]"` with `ÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À┬À┬À┬À┬Àstyle={style}ÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À┬À┬À┬À┬ÀclassName="bg-transparent┬Àborder-none┬Àtext-[#d4d4d4]"ÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À┬À┬À`  prettier/prettier
+
+Ô£û 2 problems (2 errors, 0 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+

@@ -1,0 +1,11 @@
+
+> html-element-styling-demo@1.0.0 lint
+> eslint . --report-unused-disable-directives --max-warnings 0
+
+
+C:\Users\moxch\Documents\GitHub\elementdemo\vite.config.ts
+  11:23  error  Replace `'icon.svg',┬À'apple-touch-icon.png',┬À'pwa-192x192.png',┬À'pwa-512x512.png'` with `ÔÉìÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À'icon.svg',ÔÉìÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À'apple-touch-icon.png',ÔÉìÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À'pwa-192x192.png',ÔÉìÔÅÄ┬À┬À┬À┬À┬À┬À┬À┬À'pwa-512x512.png',ÔÉìÔÅÄ┬À┬À┬À┬À┬À┬À`  prettier/prettier
+
+Ô£û 1 problem (1 error, 0 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
