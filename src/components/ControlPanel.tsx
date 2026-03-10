@@ -186,7 +186,9 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                     </div>
                     <span className="text-xs font-mono font-bold text-slate-600 min-w-12 text-right bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
                       {numValue}
-                      <span className="text-[10px] text-slate-400 ml-0.5">{currentUnit}</span>
+                      <span className="text-[10px] text-slate-400 ml-0.5">
+                        {currentUnit}
+                      </span>
                     </span>
                   </div>
                 )}
