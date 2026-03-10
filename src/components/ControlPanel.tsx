@@ -136,7 +136,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   };
 
   return (
-    <div className="p-8 flex flex-col h-full space-y-10 bg-slate-50/50">
+    <div className="p-8 flex flex-col h-full space-y-12 bg-slate-50/50">
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
           <Palette className="text-blue-600" size={20} />
@@ -147,7 +147,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </p>
       </div>
 
-      <div className="space-y-6 flex-1">
+      <div className="space-y-8 flex-1">
         {controls.map((ctrl) => {
           const isColor = ctrl.type === 'color';
           const value = styles[ctrl.prop];
@@ -162,7 +162,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           return (
             <div
               key={ctrl.prop}
-              className="group flex flex-col gap-5 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-md transition-all duration-300"
+              className="group flex flex-col gap-6 bg-white p-7 rounded-2xl shadow-sm border border-slate-200/60 hover:shadow-md transition-all duration-300"
             >
               <div className="flex justify-between items-center">
                 <label className="flex items-center gap-2 text-xs font-bold text-slate-700 uppercase tracking-widest group-hover:text-blue-600 transition-colors shrink-0">
