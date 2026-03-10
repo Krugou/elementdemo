@@ -1,55 +1,79 @@
-# HTML Element Styling Demo
+# 🎨 HTML Element Styling Demo
 
-A professional React + Vite application to demonstrate dynamic CSS styling of semantic HTML elements.
-
-## 🇺🇸 English Instructions
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v20 or newer recommended)
-- npm (comes with Node.js)
-
-### Installation
-1. Clone the repository.
-2. Run `npm install` to install dependencies.
-
-### Development
-- Run `npm run dev` to start the local development server.
-- Open `http://localhost:5173` in your browser.
-
-### Scripts
-- `npm run lint`: Runs ESLint to check for code quality issues.
-- `npm run build`: Lints, type-checks, and builds the production-ready `dist` folder.
-- `npm run format`: Formats the code using Prettier.
-
-### Deployment
-The project is configured with GitHub Actions. Any push to the `main` branch will automatically:
-1. Run linting.
-2. Build the project.
-3. Deploy the `dist` folder to GitHub Pages.
+A professional-grade React 18 + Vite + TypeScript application designed to demonstrate and experiment with dynamic CSS styling across a comprehensive suite of semantic HTML elements.
 
 ---
 
-## 🇫🇮 Suomenkieliset ohjeet
+## 🇺🇸 English Documentation
 
-### Esivaatimukset
-- [Node.js](https://nodejs.org/) (v20 tai uudempi suositeltu)
-- npm (tulee Node.js:n mukana)
+### 🚀 Overview
+This project provides a real-time, side-by-side preview environment for HTML elements. Use the high-precision controls on the right to inject styles directly into the elements on the left.
 
-### Asennus
-1. Kloonaa repositorio.
-2. Suorita `npm install` asentaaksesi riippuvuudet.
+### 🛠 Tech Stack
+- **Framework:** React 18 (Functional Components, Hooks)
+- **Build Tool:** Vite (Ultra-fast HMR)
+- **Language:** TypeScript (Strict Mode)
+- **Styling:** Tailwind CSS v4 (Dashboard UI) + Dynamic Inline CSS (Demo Elements)
+- **Linting:** ESLint 9 (Flat Config) + Prettier
+- **CI/CD:** GitHub Actions (Automated Build & Deploy to GH Pages)
 
-### Kehitys
-- Suorita `npm run dev` käynnistääksesi paikallisen kehityspalvelimen.
-- Avaa `http://localhost:5173` selaimessasi.
+### 💎 Key Features
+- **Live Preview:** Instant visual feedback as you adjust sliders and color pickers.
+- **Comprehensive Elements:** Includes Typography, Forms, Tables, Interactive elements (details/summary), and Technical elements (code/kbd).
+- **Pro Tools:** 
+  - **Copy CSS:** Instantly export your configuration to a clean CSS rule block.
+  - **Reset:** Restore default browser styling with one click.
+  - **Mobile Responsive:** Adaptive layout that switches to a top-sticky control bar on smaller screens.
 
-### Skriptit
-- `npm run lint`: Suorittaa ESLintin koodin laadun tarkistamiseksi.
-- `npm run build`: Tarkistaa lintingin ja tyypit sekä rakentaa tuotantovalmiin `dist`-kansion.
-- `npm run format`: Muotoilee koodin Prettierillä.
+### 💻 Local Development
+1. **Clone & Install:**
+   ```bash
+   npm install
+   ```
+2. **Start Dev Server:**
+   ```bash
+   npm run dev
+   ```
+3. **Run Quality Checks:**
+   ```bash
+   npm run lint   # Check for code errors
+   npm run format # Fix styling/formatting
+   ```
 
-### Julkaisu
-Projekti on määritetty käyttämään GitHub Actions -toimintoja. Jokainen push-toiminto `main`-haaraan:
-1. Suorittaa lintingin.
-2. Rakentaa projektin.
-3. Julkaisee `dist`-kansion GitHub Pages -palveluun.
+---
+
+## 🇫🇮 Suomenkielinen Dokumentaatio
+
+### 🚀 Yleiskatsaus
+Ammattitason React 18 + Vite + TypeScript -sovellus, jolla voit testata dynaamista CSS-muotoilua kattavalla valikoimalla semanttisia HTML-elementtejä.
+
+### 🛠 Teknologiapino
+- **Kehystys:** React 18 (Funktionaaliset komponentit, Hookit)
+- **Rakennustyökalu:** Vite (Erittäin nopea HMR)
+- **Kieli:** TypeScript (Strict Mode)
+- **Tyylit:** Tailwind CSS v4 (Käyttöliittymä) + Dynaaminen CSS (Demo-elementit)
+- **Laadunvarmistus:** ESLint 9 (Flat Config) + Prettier
+- **Automaatio:** GitHub Actions (Automaattinen Build & Julkaisu GitHub Pagesiin)
+
+### 💎 Tärkeimmät Ominaisuudet
+- **Reaaliaikainen Esikatselu:** Välitön visuaalinen palaute säätäessäsi värejä ja kokoja.
+- **Kattavat Elementit:** Sisältää typografian, lomakkeet, taulukot, interaktiiviset elementit ja tekniset koodielementit.
+- **Ammattilaistyökalut:**
+  - **Kopioi CSS:** Vie asetuksesi välittömästi puhtaana CSS-koodina.
+  - **Nollaa:** Palauta selaimen oletustyylit yhdellä klikkauksella.
+  - **Responsiivinen:** Mukautuva asettelu, joka toimii saumattomasti myös mobiililaitteilla.
+
+### 💻 Paikallinen Kehitys
+1. **Kloonaa ja Asenna:**
+   ```bash
+   npm install
+   ```
+2. **Käynnistä Palvelin:**
+   ```bash
+   npm run dev
+   ```
+3. **Laaduntarkistukset:**
+   ```bash
+   npm run lint   # Tarkista koodivirheet
+   npm run format # Korjaa muotoilu
+   ```
