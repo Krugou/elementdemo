@@ -65,7 +65,7 @@ const CopyButton: React.FC<{
 
 export const ElementPreview: React.FC<ElementPreviewProps> = ({ style }) => {
   return (
-    <div className="p-8 lg:p-12 space-y-16 max-w-4xl mx-auto">
+    <div className="p-12 lg:p-20 space-y-28 max-w-4xl mx-auto">
       <div className="space-y-2">
         <h2 className="text-3xl font-black text-slate-900 tracking-tight">
           Element Canvas
@@ -89,7 +89,7 @@ export const ElementPreview: React.FC<ElementPreviewProps> = ({ style }) => {
           <CopyButton sectionName="Typography" style={style} />
         </div>
 
-        <div className="space-y-8 bg-slate-50 border border-slate-100 p-8 rounded-2xl">
+        <div className="space-y-10 bg-slate-50 border border-slate-100 p-12 rounded-2xl">
           <div className="space-y-4 border-l-4 border-blue-500 pl-6">
             <h1 style={style}>Primary Display Heading</h1>
             <h2 style={style}>Secondary Section Title</h2>
@@ -142,7 +142,7 @@ export const ElementPreview: React.FC<ElementPreviewProps> = ({ style }) => {
           </h3>
           <CopyButton sectionName="Interactive" style={style} />
         </div>
-        <div className="flex flex-wrap gap-6 items-start p-8 rounded-2xl border border-slate-200 shadow-sm bg-white">
+        <div className="flex flex-wrap gap-8 items-start p-12 rounded-2xl border border-slate-200 shadow-sm bg-white">
           <button
             style={style}
             className="flex items-center gap-2 font-semibold"
@@ -179,7 +179,7 @@ export const ElementPreview: React.FC<ElementPreviewProps> = ({ style }) => {
           <CopyButton sectionName="Forms" style={style} />
         </div>
         <form
-          className="bg-white border border-slate-200 shadow-sm rounded-2xl p-8"
+          className="bg-white border border-slate-200 shadow-sm rounded-2xl p-12"
           onSubmit={(e) => e.preventDefault()}
         >
           <fieldset

@@ -8,18 +8,18 @@ function App() {
   const { styles, updateStyle, resetStyles, reactStyle } = useElementStyles();
 
   return (
-    <div className="min-h-screen bg-slate-100 p-4 md:p-6 lg:p-10 font-sans text-slate-800 selection:bg-blue-200 selection:text-blue-900">
+    <div className="min-h-screen bg-slate-100 p-6 md:p-10 lg:p-16 font-sans text-slate-800 selection:bg-blue-200 selection:text-blue-900">
       <div className="max-w-[1600px] mx-auto flex flex-col h-full min-h-[calc(100vh-5rem)] bg-white shadow-2xl shadow-slate-200/50 rounded-3xl overflow-hidden border border-slate-200 ring-1 ring-black/5">
         {/* App Header */}
-        <header className="px-8 py-5 border-b border-slate-200 bg-white flex items-center gap-3">
-          <div className="bg-blue-600 p-2 rounded-xl shadow-inner shadow-blue-800/30">
-            <LayoutTemplate className="text-white" size={24} />
+        <header className="px-10 py-8 border-b border-slate-200 bg-white flex items-center gap-4">
+          <div className="bg-blue-600 p-2.5 rounded-xl shadow-inner shadow-blue-800/30">
+            <LayoutTemplate className="text-white" size={26} />
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-slate-900 leading-tight">
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900 leading-tight">
               ElementDemo
             </h1>
-            <p className="text-xs font-medium text-slate-500">
+            <p className="text-sm font-medium text-slate-500">
               Professional HTML Styling Environment
             </p>
           </div>

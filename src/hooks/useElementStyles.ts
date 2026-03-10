@@ -19,14 +19,14 @@ export interface CSSProperties {
 }
 
 const defaultStyles: CSSProperties = {
-  color: '#000000',
-  backgroundColor: '#ffffff',
+  color: '#0f172a',
+  backgroundColor: '#f8fafc',
   fontSize: { value: 16, unit: 'px' },
-  padding: { value: 12, unit: 'px' },
-  margin: { value: 8, unit: 'px' },
-  borderWidth: { value: 1, unit: 'px' },
+  padding: { value: 0, unit: 'px' },
+  margin: { value: 0, unit: 'px' },
+  borderWidth: { value: 0, unit: 'px' },
   borderColor: '#e2e8f0',
-  borderRadius: { value: 8, unit: 'px' },
+  borderRadius: { value: 0, unit: 'px' },
 };
 
 export const useElementStyles = () => {

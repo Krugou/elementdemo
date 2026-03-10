@@ -125,7 +125,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   };
 
   return (
-    <div className="p-6 flex flex-col h-full space-y-8 bg-slate-50/50">
+    <div className="p-10 flex flex-col h-full space-y-12 bg-slate-50/50">
       <div className="flex flex-col gap-2">
         <h2 className="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
           <Palette className="text-blue-600" size={20} />
@@ -136,7 +136,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </p>
       </div>
 
-      <div className="space-y-6 flex-1">
+      <div className="space-y-10 flex-1">
         {controls.map((ctrl) => {
           const isColor = ctrl.type === 'color';
           const value = styles[ctrl.prop];
