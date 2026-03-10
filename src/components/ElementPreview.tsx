@@ -69,7 +69,7 @@ const CopyButton: React.FC<{
 
 export const ElementPreview: React.FC<ElementPreviewProps> = ({ style }) => {
   return (
-    <div className="p-12 lg:p-20 space-y-28 max-w-4xl mx-auto">
+    <div className="p-12 lg:p-24 space-y-28 w-full">
       <div className="space-y-2">
         <h2 className="text-3xl font-black text-slate-900 tracking-tight">
           Element Canvas
