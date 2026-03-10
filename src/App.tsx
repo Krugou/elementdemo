@@ -12,20 +12,23 @@ function App() {
     const testEl = document.createElement('div');
     testEl.className = 'hidden text-[#123456]';
     document.body.appendChild(testEl);
-    
+
     const color = window.getComputedStyle(testEl).color;
     const isTailwindWorking = color === 'rgb(18, 52, 86)';
-    
+
     console.log(
       `%c Tailwind CSS Diagnostic %c ${isTailwindWorking ? 'PASS' : 'FAIL'} `,
       'background: #3b82f6; color: white; font-weight: bold; border-radius: 4px 0 0 4px; padding: 2px 6px;',
-      `background: ${isTailwindWorking ? '#10b981' : '#ef4444'}; color: white; font-weight: bold; border-radius: 0 4px 4px 0; padding: 2px 6px;`
+      `background: ${isTailwindWorking ? '#10b981' : '#ef4444'}; color: white; font-weight: bold; border-radius: 0 4px 4px 0; padding: 2px 6px;`,
     );
-    
+
     if (isTailwindWorking) {
       console.log('%cComputed color match:', 'color: #10b981', color);
     } else {
-      console.warn('Tailwind CSS might not be processing classes correctly. Expected rgb(18, 52, 86) but got:', color);
+      console.warn(
+        'Tailwind CSS might not be processing classes correctly. Expected rgb(18, 52, 86) but got:',
+        color,
+      );
     }
 
     document.body.removeChild(testEl);
