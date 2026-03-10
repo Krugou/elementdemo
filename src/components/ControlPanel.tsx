@@ -160,9 +160,9 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           const currentUnit = isStyleObj ? (value as StyleValue).unit : '';
 
           return (
-            <div key={ctrl.prop} className="group flex flex-col gap-2">
+            <div key={ctrl.prop} className="group flex flex-col gap-4">
               <div className="flex justify-between items-center">
-                <label className="flex items-center gap-2 text-xs font-semibold text-slate-700 uppercase tracking-tight group-hover:text-blue-600 transition-colors">
+                <label className="flex items-center gap-2 text-xs font-bold text-slate-700 uppercase tracking-widest group-hover:text-blue-600 transition-colors shrink-0">
                   <span className="text-slate-400 group-hover:text-blue-500 transition-colors">
                     {ctrl.icon}
                   </span>
@@ -170,23 +170,23 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                 </label>
 
                 {!isColor && isStyleObj && (
-                  <div className="flex items-center gap-2">
-                    <div className="flex bg-slate-200/80 p-0.5 rounded-md text-[10px] font-bold tracking-wider">
+                  <div className="flex items-center gap-4">
+                    <div className="flex bg-slate-200/50 p-1 rounded-lg text-[10px] font-bold tracking-wider border border-slate-200/50">
                       {(['px', 'rem', 'em'] as CssUnit[]).map((u) => (
                         <button
                           key={u}
                           onClick={() =>
                             handleUnitChange(ctrl.prop, value as StyleValue, u)
                           }
-                          className={`px-1.5 py-0.5 rounded-sm transition-all ${currentUnit === u ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                          className={`px-2 py-0.5 rounded-md transition-all ${currentUnit === u ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200' : 'text-slate-400 hover:text-slate-600'}`}
                         >
                           {u}
                         </button>
                       ))}
                     </div>
-                    <span className="text-[11px] font-mono font-medium text-slate-600 w-10 text-right">
+                    <span className="text-xs font-mono font-bold text-slate-600 min-w-12 text-right bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
                       {numValue}
-                      {currentUnit}
+                      <span className="text-[10px] text-slate-400 ml-0.5">{currentUnit}</span>
                     </span>
                   </div>
                 )}
@@ -215,7 +215,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                         })
                       : onUpdate(ctrl.prop, parseInt(e.target.value))
                   }
-                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600 hover:accent-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-1"
+                  className="w-full h-1.5 bg-slate-200 rounded-full appearance-none cursor-pointer accent-blue-600 hover:accent-blue-700 transition-all focus:outline-none focus:ring-4 focus:ring-blue-100"
                 />
               )}
             </div>
