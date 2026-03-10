@@ -22,6 +22,8 @@ body {
   background: #f1f5f9; /* slate-100 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 #root {
