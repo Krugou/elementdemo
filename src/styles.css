@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Minimalist global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background: #fff;
+}
+
+#root {
+  min-height: 100vh;
+}
