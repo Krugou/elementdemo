@@ -13,7 +13,11 @@ function App() {
           <ElementPreview style={reactStyle} />
         </main>
         <aside className="w-full lg:w-[380px] border-b lg:border-b-0 lg:border-l border-gray-200 bg-gray-50 order-1 lg:order-2 lg:h-auto lg:overflow-y-auto">
-          <ControlPanel styles={styles} onUpdate={updateStyle} onReset={resetStyles} />
+          <ControlPanel
+            styles={styles}
+            onUpdate={updateStyle}
+            onReset={resetStyles}
+          />
         </aside>
       </div>
     </div>
