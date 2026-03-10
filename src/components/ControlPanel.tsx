@@ -147,7 +147,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
         </p>
       </div>
 
-      <div className="space-y-20 flex-1 py-10 h-full ">
+      <div className="flex flex-col gap-20 flex-1 py-10 h-full ">
         {controls.map((ctrl) => {
           const isColor = ctrl.type === 'color';
           const value = styles[ctrl.prop];
