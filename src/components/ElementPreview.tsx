@@ -23,8 +23,7 @@ const CopyButton: React.FC<{
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const css = `/* ${sectionName} Styles */
-.demo-${sectionName.toLowerCase().replace(/\s+/g, '-')} {
+    const css = `.demo-${sectionName.toLowerCase().replace(/\s+/g, '-')} {
   color: ${style.color};
   background-color: ${style.backgroundColor};
   font-size: ${style.fontSize};
@@ -35,7 +34,12 @@ const CopyButton: React.FC<{
   border-radius: ${style.borderRadius};
   border-style: solid;
 }`;
-    navigator.clipboard.writeText(css);
+
+    const tailwind = `text-[${style.color}] bg-[${style.backgroundColor}] text-[${style.fontSize}] p-[${style.padding}] m-[${style.margin}] border-[${style.borderWidth}] border-[${style.borderColor}] rounded-[${style.borderRadius}] border-solid`;
+
+    const finalOutput = `/* CSS Block */\n${css}\n\n/* Tailwind Classes */\n${tailwind}`;
+
+    navigator.clipboard.writeText(finalOutput);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

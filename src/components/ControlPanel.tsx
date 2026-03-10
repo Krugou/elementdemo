@@ -50,7 +50,18 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
   border: ${formatStyleValue(styles.borderWidth)} solid ${styles.borderColor};
   border-radius: ${formatStyleValue(styles.borderRadius)};
 }`;
-    navigator.clipboard.writeText(css);
+
+    const tailwind = `text-[${styles.color}] bg-[${styles.backgroundColor}] text-[${formatStyleValue(
+      styles.fontSize,
+    )}] p-[${formatStyleValue(styles.padding)}] m-[${formatStyleValue(
+      styles.margin,
+    )}] border-[${formatStyleValue(styles.borderWidth)}] border-[${
+      styles.borderColor
+    }] rounded-[${formatStyleValue(styles.borderRadius)}] border-solid`;
+
+    const finalOutput = `/* CSS Block */\n${css}\n\n/* Tailwind Classes */\n${tailwind}`;
+
+    navigator.clipboard.writeText(finalOutput);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
