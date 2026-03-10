@@ -15,11 +15,11 @@ const defaultStyles: CSSProperties = {
   color: '#000000',
   backgroundColor: '#ffffff',
   fontSize: 16,
-  padding: 8,
+  padding: 12,
   margin: 8,
   borderWidth: 1,
-  borderColor: '#cccccc',
-  borderRadius: 4,
+  borderColor: '#e2e8f0',
+  borderRadius: 8,
 };
 
 export const useElementStyles = () => {
@@ -35,6 +35,10 @@ export const useElementStyles = () => {
     [],
   );
 
+  const resetStyles = useCallback(() => {
+    setStyles(defaultStyles);
+  }, []);
+
   const reactStyle: React.CSSProperties = {
     color: styles.color,
     backgroundColor: styles.backgroundColor,
@@ -45,7 +49,8 @@ export const useElementStyles = () => {
     borderColor: styles.borderColor,
     borderRadius: `${styles.borderRadius}px`,
     borderStyle: 'solid',
+    transition: 'all 0.1s ease-out',
   };
 
-  return { styles, updateStyle, reactStyle };
+  return { styles, updateStyle, resetStyles, reactStyle };
 };
